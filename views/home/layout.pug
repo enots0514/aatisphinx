@@ -1,0 +1,32 @@
+doctype html
+html(lang="ko")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Sphinx'Coding Story
+        link(rel="stylesheet" href="/css/home.css")
+        block style
+        
+
+    body                  
+       - const title = "Sphinx'Coding Story"; 
+        header
+            div#title_box
+                a.title_img(href="/") 
+                h1.title_text #{title} 
+            div#title_content
+                span.title_backImg 
+                h1.title_text #{guest_nicname} 
+            div#title_register
+                a.login(href="/register/login") 로그인
+                
+               
+                 
+            
+        main 
+
+            block indexContent 
+            
+        footer 
+             p 이 사이트는 #{title}

@@ -15,9 +15,8 @@ html(lang="ko")
             div#title_box
                 a.title_img(href="/") 
                 h1.title_text #{title} 
-            div#title_content
-                span.title_backImg 
-                h1.title_text #{guest_nicname} 
+            div#title_content               
+                h1.title2_text &#128211 express, mongoose로 정리한 백엔드의 모든 것
             div#title_register
                 a.login(href="/register/login") 로그인
                 
@@ -29,4 +28,7 @@ html(lang="ko")
             block indexContent 
             
         footer 
-             p 이 사이트는 #{title}
+            - const date = new Date().toLocaleString();
+             p.foot_text #{title}에 #{guest_nicname} 로그인 하셨습니다. 
+                 span.title_backImg 
+                 span.foot_subtext 접속한 시점은 #{date} 

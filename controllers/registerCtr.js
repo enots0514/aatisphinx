@@ -20,7 +20,7 @@ module.exports.login = (req, res) => {
                                             return;
                                         }
                                         console.log("로그인 되었습니다.");
-                                         res.render('home/index', {guest_nicname:`${user.nicname}님 로그인 되었습니다`}); 
+                                         res.render('home/index', {guest_nicname:`${user.nicname}님`}); 
                                      }) 
 
 

@@ -15,8 +15,8 @@
 >   >   > 암호화 및 섹션 사용 없음
 
 
-> bcript모듈
->   > bcript모듈 활용, salt와 hash 사용해 암호화하기
+> bcript모듈(모듈명 철자를 잘못 썼네, 하지만 브랜치는 그냥 이대로)
+>   > bcrypt(철자 주의)모듈 활용, salt와 hash 사용해 암호화하기
 >   >   > 참조사이트
 * 공식사이트
     - https://www.npmjs.com/package/bcrypt
@@ -26,7 +26,7 @@
     - https://stackoverflow.com/questions/14588032/mongoose-password-hashing
 * 해외유저사이트
     - https://coderrocketfuel.com/article/store-passwords-in-mongodb-with-node-js-mongoose-and-bcrypt
-    
+
     #### 순서없는 리스트 (글머리 기호 *, -, + 지원)
 * 1단계
     - 2단계

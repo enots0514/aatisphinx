@@ -18,12 +18,16 @@
 > bcript모듈
 >   > bcript모듈 활용, salt와 hash 사용해 암호화하기
 >   >   > 참조사이트
-* https://velog.io/@iamhayoung/Bcrypt%EB%A1%9C-%EB%B9%84%EB%B0%80%EB%B2%88%ED%98%B8-%EC%95%94%ED%98%B8%ED%99%94%ED%95%98%EA%B8%B0
-
-* https://stackoverflow.com/questions/14588032/mongoose-password-hashing
-
-* https://coderrocketfuel.com/article/store-passwords-in-mongodb-with-node-js-mongoose-and-bcrypt
-#### 순서없는 리스트 (글머리 기호 *, -, + 지원)
+* 공식사이트
+    - https://www.npmjs.com/package/bcrypt
+* 국내유저사이트     
+    - https://velog.io/@iamhayoung/Bcrypt%EB%A1%9C-%EB%B9%84%EB%B0%80%EB%B2%88%ED%98%B8-%EC%95%94%ED%98%B8%ED%99%94%ED%95%98%EA%B8%B0
+* stackoverflow
+    - https://stackoverflow.com/questions/14588032/mongoose-password-hashing
+* 해외유저사이트
+    - https://coderrocketfuel.com/article/store-passwords-in-mongodb-with-node-js-mongoose-and-bcrypt
+    
+    #### 순서없는 리스트 (글머리 기호 *, -, + 지원)
 * 1단계
     - 2단계
         + 3단계

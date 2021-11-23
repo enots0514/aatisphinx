@@ -27,6 +27,19 @@
 * 해외유저사이트
     - https://coderrocketfuel.com/article/store-passwords-in-mongodb-with-node-js-mongoose-and-bcrypt
 
+
+> passports
+>   > passportjs를 활용한 회원가입 및 로그인 기본 포맷
+>   >   > bcrypt 암호화 기반 위에 섹션 추가
+* 공식사이트
+    - http://www.passportjs.org/
+* 국내유저사이트     
+    - https://mindflip.github.io/javascript/node.js/nodejs_passport/
+* 국내유저사이트2
+    - https://dev-dain.tistory.com/73
+
+
+
     #### 순서없는 리스트 (글머리 기호 *, -, + 지원)
 * 1단계
     - 2단계

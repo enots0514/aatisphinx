@@ -39,6 +39,8 @@ guestSchema.pre('save', function(next) {
       
 });
 
+
+/* passport 활용시 삭제 - 로컬 전략 안으로 들어감
 guestSchema.methods.comparePwd = function(pwd, cb) {
 
     bcrypt.compare(pwd, this.pwd, function(err, isMatch) {
@@ -50,5 +52,6 @@ guestSchema.methods.comparePwd = function(pwd, cb) {
    })
 }
 
+*/
 
 module.exports = mongoose.model('guest', guestSchema);

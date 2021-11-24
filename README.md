@@ -38,6 +38,13 @@
 * 국내유저사이트2
     - https://dev-dain.tistory.com/73
 
+> flash Message
+>   > 회원가입 및 로그인에 플래시메시지 추가하기
+>   >   > connect-flash 모듈 활용
+* 국내유저사이트
+ - https://m.blog.naver.com/rwans0397/220680181786
+* 국내유저사이트2
+   - https://dev-dain.tistory.com/73
 
 
     #### 순서없는 리스트 (글머리 기호 *, -, + 지원)

@@ -2,12 +2,14 @@ const express = require('express');
 const router = express.Router();
 const passport = require('passport');
 
+
 const registerCtr = require('../controllers/registerCtr');
 
 
 
 router.get('/login', (req,res)=> {
-    res.render("register/login");
+    
+    res.render("register/login", {formTitle:req.flash().error});
 });
 
 // router.post('/login', registerCtr.login);
@@ -15,7 +17,8 @@ router.get('/login', (req,res)=> {
 router.post('/Login', passport.authenticate("local",
      {
         failureRedirect: "/register/login",
-          successRedirect: "/"
+          successRedirect: "/",
+          failureFlash:true
         
       })
   );
@@ -23,7 +26,7 @@ router.post('/Login', passport.authenticate("local",
 
 
 router.get('/register', (req,res)=> {
-    res.render("register/register");
+    res.render("register/register", {formTitle:req.flash().error});
 });
 
 router.post('/register', registerCtr.guestcheck, registerCtr.guestsave);

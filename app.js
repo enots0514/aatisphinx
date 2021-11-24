@@ -5,6 +5,8 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const expressSession = require('express-session');
 const passport = require('passport');
+const flash = require('connect-flash');
+
 
 const passportConfig = require('./passport');
 // passport폴더에 있는 index.js를 의미함.
@@ -24,8 +26,12 @@ app.use(expressSession(
             } 
           }));
 
-//패스포트는 쿠키 및 세션 아래에 위치해야 한다.
-// 패스포트가 내부적으로 쿠키 및 세션을 사용하기 때문이다.
+//플래쉬와 패스포트는 쿠키 및 세션 아래에 위치해야 한다.
+// 플래쉬와 패스포트가 내부적으로 쿠키 및 세션을 사용하기 때문이다.
+
+app.use(flash());
+
+
 
 app.use(passport.initialize()); 
    // 패스포트 사용 및 초기화를 위한 express.js 설정임 

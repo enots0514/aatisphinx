@@ -38,8 +38,8 @@
 * 국내유저사이트2
     - https://dev-dain.tistory.com/73
 
-> flash Message
->   > 회원가입 및 로그인에 플래시메시지 추가하기
+> flashmsg
+>   > 회원가입 및 로그인에 flash Message 추가하기
 >   >   > connect-flash 모듈 활용
 * 국내유저사이트
  - https://m.blog.naver.com/rwans0397/220680181786

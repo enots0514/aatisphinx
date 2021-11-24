@@ -117,7 +117,7 @@ module.exports.guestsave = (req, res) => {
      
              user.save()
                        .then( result => 
-                        res.render('register/register', {formTitle:`${result.nicname}님 회원가입에 성공하셨습니다.`})
+                        res.render('register/login', {formTitle:`${result.nicname}님 회원가입에 성공하셨습니다.`})
                         );
                     }    
 };

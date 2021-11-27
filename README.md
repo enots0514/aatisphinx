@@ -47,6 +47,15 @@
    - https://dev-dain.tistory.com/73
 
 
+> logouts
+>   > 로그인 시에만 콘텐츠 보기 및 로그아웃 구현
+>   >   > req.logout();
+* 공식사이트
+ - http://www.passportjs.org/docs/login/
+* 국내유저사이트2
+   - https://dev-dain.tistory.com/73
+
+
     #### 순서없는 리스트 (글머리 기호 *, -, + 지원)
 * 1단계
     - 2단계

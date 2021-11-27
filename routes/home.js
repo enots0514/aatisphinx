@@ -3,8 +3,19 @@ const router = express.Router();
 
 
 router.get('/', (req,res)=> {
-    // console.log(req.user);
-    res.render('home/index')
+
+    if(req.user) {
+        // console.log(req.user);
+        // console.log(req.user.nicname);
+        let nicname = req.user.nicname;
+        res.render('home/index', {nicname:nicname});
+       
+    } else {
+        res.render('home/index')
+        
+    }
+     
+   
 });
 
 

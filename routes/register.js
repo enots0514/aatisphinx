@@ -32,5 +32,19 @@ router.get('/register', (req,res)=> {
 router.post('/register', registerCtr.guestcheck, registerCtr.guestsave);
 
 
+router.get('/logout', async (req,res)=> {
+   await req.logout();
+//    console.log("1 :", req.user)
+  
+//    console.log("1session:", req.session)
+    req.session.save((err) => {
+        if(err) console.log(err);
+        nicname = " ";
+        res.render('home/index', {nicname:nicname});
+        
+    });
+   
+});
+
 
 module.exports = router;

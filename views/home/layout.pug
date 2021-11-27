@@ -19,16 +19,17 @@ html(lang="ko")
                 h1.title2_text &#128211 express, mongoose로 정리한 백엔드의 모든 것
             div#title_register
                 a.login(href="/register/login") 로그인
-                
-               
-                 
-            
+                a.logout(href="/register/logout") 로그아웃 
         main 
 
             block indexContent 
             
         footer 
             - const date = new Date().toLocaleString();
-             p.foot_text #{title}에 #{guest_nicname} 로그인 하셨습니다. 
+                     
+            p.foot_text #{title}에 #{nicname} 로그인 하셨습니다. 
                  span.title_backImg 
                  span.foot_subtext 접속한 시점은 #{date} 
+
+    
+        

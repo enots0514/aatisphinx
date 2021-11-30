@@ -3,6 +3,9 @@
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
+const dotenv = require('dotenv');
+dotenv.config();
+
 const bcrypt = require('bcrypt');
 
 const Guest = require('../models/guestSchema');
@@ -35,8 +38,8 @@ module.exports = () => {
     }));
 
     passport.use(new GoogleStrategy({
-      clientID: "35580780880-t5tkndhq0ha0bvrf2iv4pjftfrhq47eg.apps.googleusercontent.com",
-      clientSecret: "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",
+      clientID: process.env.GOOGLE_CLIENT_ID ,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
       callbackURL: "http://localhost:3000/auth/google/callback"
     },
      

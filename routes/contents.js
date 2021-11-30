@@ -14,8 +14,7 @@ const linkopen = function (req, res, next) {
         // console.log("session:", req.session)
         // console.log(req.user);
         // console.log(req.user.nicname);
-              
-        nicname = req.user.nicname;
+        displayName = req.user.displayName;      
         next();
       
     }
@@ -29,7 +28,7 @@ const linkopen = function (req, res, next) {
 
     router.get('/nodejs', linkopen, (req,res)=> {
     
-         res.render('contents/01_nodejs', {nicname})
+         res.render('contents/01_nodejs', {displayName})
 
         });   
            
@@ -52,7 +51,7 @@ const linkopen = function (req, res, next) {
 */
     router.get('/express', linkopen,  (req,res)=> {
     
-        res.render('contents/02_express', {nicname})
+        res.render('contents/02_express', {displayName})
                   
        
     });

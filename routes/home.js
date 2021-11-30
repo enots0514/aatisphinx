@@ -7,8 +7,8 @@ router.get('/', (req,res)=> {
     if(req.user) {
         // console.log(req.user);
         // console.log(req.user.nicname);
-        let nicname = req.user.nicname;
-        res.render('home/index', {nicname:nicname});
+        let displayName = req.user.displayName;
+        res.render('home/index', {displayName:displayName});
        
     } else {
         res.render('home/index')

@@ -85,21 +85,22 @@ header{height:7vh;
 
 
 #title_content{
-    flex: 1 1 50%;
+    flex: 1 1 40%;
   /* border:1px solid red; */
 }
 
 #title_register{
-    flex: 1 1 20%;
+    flex: 1 1 30%;
   /* border:1px solid red; */
 }
 
 #title_register>a{
    display:inline-block;
    margin-left:5%;
-   margin-top:3%;
-   width:40%;
-   height:70%;
+   margin-top:1%;
+   margin-bottom:1%;
+   width:25%;
+   height:80%;
    padding:3%;
    text-align: center;
    border:5px; 
@@ -107,7 +108,7 @@ header{height:7vh;
    border-style: outset;
    border-radius: 20%;
    background-color: rgba(136, 142, 158, 0.904);
-   line-height:1;
+   line-height:0.5;
    font-family:maruSB;
    font-size:1vw;
    text-decoration: none;

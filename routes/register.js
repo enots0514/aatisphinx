@@ -39,8 +39,8 @@ router.get('/logout', async (req,res)=> {
 //    console.log("1session:", req.session)
     req.session.save((err) => {
         if(err) console.log(err);
-        nicname = " ";
-        res.render('home/index', {nicname:nicname});
+        displayName = " ";
+        res.render('home/index', {displayName:displayName});
         
     });
    

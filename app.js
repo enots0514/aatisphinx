@@ -9,12 +9,14 @@ const flash = require('connect-flash');
 
 
 const passportConfig = require('./passport');
+
 // passport폴더에 있는 index.js를 의미함.
 const home = require('./routes/home');
 const register = require('./routes/register');
 const contents = require('./routes/contents');
-
+const auth = require('./routes/auth');
 passportConfig();
+
 // passport폴더에 있는 index.js의 serializeUser(), deserializeUser() 실행을 의미함.
 
 app.use(cookieParser());
@@ -53,6 +55,7 @@ app.set('view engine', 'pug');
 app.use('/', home);
 app.use('/register', register);
 app.use('/contents', contents);
+app.use('/auth', auth);
 
 
 module.exports = app;

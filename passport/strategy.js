@@ -2,6 +2,7 @@
 
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
+const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const bcrypt = require('bcrypt');
 
 const Guest = require('../models/guestSchema');
@@ -32,4 +33,58 @@ module.exports = () => {
         done(error);
       }
     }));
-  };
+
+    passport.use(new GoogleStrategy({
+      clientID: "35580780880-t5tkndhq0ha0bvrf2iv4pjftfrhq47eg.apps.googleusercontent.com",
+      clientSecret: "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",
+      callbackURL: "http://localhost:3000/auth/google/callback"
+    },
+     
+    async (accessToken, refreshToken, profile, done) => {
+      // console.log('accessToken: ', accessToken);
+      // console.log('profile: ', profile);
+      // console.log('profile.id: ', profile.id);
+      // console.log('email: ', profile.emails[0].value);
+      // console.log('profile.displayName: ', profile.displayName);
+   
+      try { 
+        let user;
+      await Guest.find({email : profile.emails[0].value})
+      .then( data  => {
+
+        if(data.length>0) {
+
+            user = data;
+            // console.log('userdata: ', user) 
+           
+        }
+        else{
+          user = new Guest({
+            pwd: profile.id,
+            displayName : profile.displayName,
+            email : profile.emails[0].value         
+        });
+  
+        user.save();
+       
+      }
+      
+             
+      // console.log('user: ', user);
+        done(null, user);
+
+      });  
+
+      } catch (error) {
+        console.error(error);
+        done(error);
+      }
+         
+       
+      }
+
+        ));
+     
+
+    };
+        

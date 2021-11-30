@@ -23,7 +23,7 @@ module.exports.login = (req, res) => {
                                             return;
                                         }
                                         console.log("로그인 되었습니다.");
-                                         res.render('home/index', {guest_nicname:`${user.nicname}님`}); 
+                                         res.render('home/index', {guest_displayName:`${user.displayName}님`}); 
                                      }) 
 
 
@@ -111,13 +111,13 @@ module.exports.guestsave = (req, res) => {
                 
             let user = new Guest({
                 email : req.body.email,
-                nicname : req.body.nicname,
+                displayName : req.body.displayName,
                 pwd : req.body.pwd
              });
      
              user.save()
                        .then( result => 
-                        res.render('register/login', {formTitle:`${result.nicname}님 회원가입에 성공하셨습니다.`})
+                        res.render('register/login', {formTitle:`${result.displayName}님 회원가입에 성공하셨습니다.`})
                         );
                     }    
 };

@@ -8,7 +8,7 @@ const saltRounds = 10;
 const guestSchema = new mongoose.Schema({
   email: {type:String, required:true, unique:true},
   pwd:String,
-  nicname:String,
+  displayName:String,
   confirm:String
 });
 
